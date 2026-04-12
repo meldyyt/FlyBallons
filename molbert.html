@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Фотозона на мольберте — Fly Balloons</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<div class="bg-decor"></div>
+
+<!-- ===== NAVBAR ===== -->
+<nav>
+  <a href="index.html" class="nav-logo">
+    <img src="logo.jpg" alt="Fly Balloons" />
+    <span class="nav-logo-text gradient-text">Fly Balloons</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="stoyki.html">Стойки</a></li>
+    <li><a href="molbert.html" style="color:var(--pink-deep)">Мольберты</a></li>
+    <li><a href="gel.html">Гелиевые</a></li>
+  </ul>
+  <button class="burger" id="burger" aria-label="Меню">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="index.html">Главная</a>
+  <a href="stoyki.html">Стойки на шарах</a>
+  <a href="molbert.html">Фотозона на мольберте</a>
+  <a href="gel.html">Гелиевые шары</a>
+  <a href="https://www.instagram.com/flyballoons_astana?igsh=MWNscHQ0MnloODJ1OQ==" target="_blank">Instagram</a>
+</div>
+
+<!-- ===== PAGE HEADER ===== -->
+<div class="page-header">
+  <div class="page-header-badge fade-in">Аренда</div>
+  <h1 class="gradient-text fade-in">Фотозона на мольберте</h1>
+  <div class="promo-tag fade-in">🎨 Акция — 10 000 тг</div>
+</div>
+
+<!-- ===== TABS ===== -->
+<div class="tabs-container">
+  <div class="tabs-nav">
+    <button class="tab-btn active" data-tab="boy">👦 Для мальчика</button>
+    <button class="tab-btn" data-tab="girl">👧 Для девочки</button>
+    <button class="tab-btn" data-tab="gender">🎀 Гендер пати</button>
+  </div>
+
+  <!-- ДЛЯ МАЛЬЧИКА -->
+  <div class="tab-content active" id="tab-boy">
+    <div class="product-grid">
+
+      <div class="product-card fade-in" id="mb-boy-1"
+           data-id="mb-boy-1" data-name="Мольберт «Первый годик»" data-price="10 000 тг" data-img="">  <!-- 👆 ФОТО: Мольберт «Первый годик» → data-img="фото/mb-boy-1.jpg" -->
+        <div class="product-card-placeholder">🎂</div>
+        <div class="card-zoom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg></div>
+        <div class="product-card-body">
+          <div class="product-card-name">Мольберт «Первый годик»</div>
+          <div class="product-card-price">10 000 тг</div>
+        </div>
+      </div>
+
+      <div class="product-card fade-in" id="mb-boy-2"
+           data-id="mb-boy-2" data-name="Мольберт «Динозавр»" data-price="10 000 тг" data-img="">  <!-- 👆 ФОТО: Мольберт «Динозавр» → data-img="фото/mb-boy-2.jpg" -->
+        <div class="product-card-placeholder">🦕</div>
+        <div class="card-zoom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg></div>
+        <div class="product-card-body">
+          <div class="product-card-name">Мольберт «Динозавр»</div>
+          <div class="product-card-price">10 000 тг</div>
+        </div>
+      </div>
+
+      <div class="product-card fade-in" id="mb-boy-3"
+           data-id="mb-boy-3" data-name="Мольберт «Супергерои»" data-price="10 000 тг" data-img="">  <!-- 👆 ФОТО: Мольберт «Супергерои» → data-img="фото/mb-boy-3.jpg" -->
+        <div class="product-card-placeholder">🦸</div>
+        <div class="card-zoom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg></div>
+        <div class="product-card-body">
+          <div class="product-card-name">Мольберт «Супергерои»</div>
+          <div class="product-card-price">10 000 тг</div>
+        </div>
+      </div>
+
+      <div class="product-card fade-in" id="mb-boy-4"
+           data-id="mb-boy-4" data-name="Мольберт «Машинки»" data-price="10 000 тг" data-img="">  <!-- 👆 ФОТО: Мольберт «Машинки» → data-img="фото/mb-boy-4.jpg" -->
+        <div class="product-card-placeholder">🏎️</div>
+        <div class="card-zoom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg></div>
+        <div class="product-card-body">
+          <div class="product-card-name">Мольберт «Машинки»</div>
+          <div class="product-card-price">10 000 тг</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ДЛЯ ДЕВОЧКИ -->
+  <div class="tab-content" id="tab-girl">
+    <div class="product-grid">
+
+      <div class="product-card fade-in" id="mb-girl-1"
+           data-id="mb-girl-1" data-name="Мольберт «Принцесса»" data-price="10 000 тг" data-img="">  <!-- 👆 ФОТО: Мольберт «Принцесса» → data-img="фото/mb-girl-1.jpg" -->
+        <div class="product-card-placeholder">👸</div>
+        <div class="card-zoom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg></div>
+        <div class="product-card-body">
+          <div class="product-card-name">Мольберт «Принцесса»</div>
+          <div class="product-card-price">10 000 тг</div>
+        </div>
+      </div>
+
+      <div class="product-card fade-in" id="mb-girl-2"
+           data-id="mb-girl-2" data-name="Мольберт «Единорог»" data-price="10 000 тг" data-img="">  <!-- 👆 ФОТО: Мольберт «Единорог» → data-img="фото/mb-girl-2.jpg" -->
+        <div class="product-card-placeholder">🦄</div>
+        <div class="card-zoom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg></div>
+        <div class="product-card-body">
+          <div class="product-card-name">Мольберт «Единорог»</div>
+          <div class="product-card-price">10 000 тг</div>
+        </div>
+      </div>
+
+      <div class="product-card fade-in" id="mb-girl-3"
+           data-id="mb-girl-3" data-name="Мольберт «Цветочный сад»" data-price="10 000 тг" data-img="">  <!-- 👆 ФОТО: Мольберт «Цветочный сад» → data-img="фото/mb-girl-3.jpg" -->
+        <div class="product-card-placeholder">🌸</div>
+        <div class="card-zoom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg></div>
+        <div class="product-card-body">
+          <div class="product-card-name">Мольберт «Цветочный сад»</div>
+          <div class="product-card-price">10 000 тг</div>
+        </div>
+      </div>
+
+      <div class="product-card fade-in" id="mb-girl-4"
+           data-id="mb-girl-4" data-name="Мольберт «Балерина»" data-price="10 000 тг" data-img="">  <!-- 👆 ФОТО: Мольберт «Балерина» → data-img="фото/mb-girl-4.jpg" -->
+        <div class="product-card-placeholder">🩰</div>
+        <div class="card-zoom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg></div>
+        <div class="product-card-body">
+          <div class="product-card-name">Мольберт «Балерина»</div>
+          <div class="product-card-price">10 000 тг</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ГЕНДЕР ПАТИ -->
+  <div class="tab-content" id="tab-gender">
+    <div class="product-grid">
+
+      <div class="product-card fade-in" id="mb-gen-1"
+           data-id="mb-gen-1" data-name="Гендер «Розовый & Голубой»" data-price="10 000 тг" data-img="">  <!-- 👆 ФОТО: Гендер «Розовый & Голубой» → data-img="фото/mb-gen-1.jpg" -->
+        <div class="product-card-placeholder">🎀</div>
+        <div class="card-zoom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg></div>
+        <div class="product-card-body">
+          <div class="product-card-name">Гендер «Розовый & Голубой»</div>
+          <div class="product-card-price">10 000 тг</div>
+        </div>
+      </div>
+
+      <div class="product-card fade-in" id="mb-gen-2"
+           data-id="mb-gen-2" data-name="Гендер «Облачный»" data-price="10 000 тг" data-img="">  <!-- 👆 ФОТО: Гендер «Облачный» → data-img="фото/mb-gen-2.jpg" -->
+        <div class="product-card-placeholder">☁️</div>
+        <div class="card-zoom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg></div>
+        <div class="product-card-body">
+          <div class="product-card-name">Гендер «Облачный»</div>
+          <div class="product-card-price">10 000 тг</div>
+        </div>
+      </div>
+
+      <div class="product-card fade-in" id="mb-gen-3"
+           data-id="mb-gen-3" data-name="Гендер «Звёздный»" data-price="10 000 тг" data-img="">  <!-- 👆 ФОТО: Гендер «Звёздный» → data-img="фото/mb-gen-3.jpg" -->
+        <div class="product-card-placeholder">⭐</div>
+        <div class="card-zoom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg></div>
+        <div class="product-card-body">
+          <div class="product-card-name">Гендер «Звёздный»</div>
+          <div class="product-card-price">10 000 тг</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</div><!-- /tabs-container -->
+
+<!-- ===== RENTAL RULES ===== -->
+<div class="rules-block">
+  <div class="rules-card fade-in">
+    <h2 class="gradient-text">Правила аренды</h2>
+    <div class="rules-divider"></div>
+
+    <div class="rules-lang-title">🇷🇺 Русский</div>
+    <div class="rules-text">В нашем магазине действует специальное предложение на аренду мольбертов — отличный вариант для оформления вашего праздника 🎉
+Стоимость аренды — 10 000 тг.
+
+Срок аренды составляет 24 часа.
+
+В стоимость аренды входит:
+• деревянный мольберт
+• круг с надписью
+• фигурка (если представлена в композиции на фото)
+• Baby Box (если представлен в композиции на фото)
+
+📍 Самовывоз: г. Астана, ул. Кошкарбаева, 41
+
+🔴💰 Обращаем внимание: помимо оплаты аренды, взимается залог в размере 10 000 тг, который возвращается при сдаче всех предметов в надлежащем состоянии.
+
+🔴 Мы работаем по 50% предоплате!</div>
+
+    <div class="rules-lang-title" style="margin-top:32px;">🇰🇿 Қазақша</div>
+    <div class="rules-text">Біздің дүкенде мольбертті жалға алуға арналған арнайы ұсыныс бар — мерекеңізді әсемдеуге тамаша таңдау 🎉
+Жалдау құны — 10 000 тг.
+
+Жалдау мерзімі — 24 сағат.
+
+Жалдау құнына кіреді:
+• ағаш мольберт
+• жазуы бар шеңбер
+• мүсінше (егер фото композициясында көрсетілген болса)
+• Baby Box (егер фото композициясында көрсетілген болса)
+
+📍 Өздігінен алып кету: Астана қ., Қошқарбаев көшесі, 41
+
+🔴💰 Назар аударыңыз: жалдау ақысына қосымша 10 000 тг мөлшерінде кепілдік төлем алынады.
+
+🔴 Біз 50% алдын ала төлем арқылы жұмыс жасаймыз!</div>
+  </div>
+</div>
+
+<!-- ===== MODAL ===== -->
+<div class="modal-overlay" id="modal">
+  <div class="modal-box modal-relative">
+    <button class="modal-close" id="modalClose">✕</button>
+    <img class="modal-img" id="modalImg" src="" alt="Товар" style="display:none;" />
+    <div id="modalPlaceholder" style="font-size:4rem;text-align:center;padding:40px;background:linear-gradient(135deg,var(--pink-light),var(--gold-light));"></div>
+    <div class="modal-body">
+      <div class="modal-title" id="modalTitle"></div>
+      <div class="modal-price" id="modalPrice"></div>
+      <a href="#" id="modalWA" target="_blank" class="btn-whatsapp">
+        <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.115.554 4.102 1.523 5.827L0 24l6.341-1.498A11.934 11.934 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.809 9.809 0 01-5.001-1.37l-.36-.214-3.733.882.924-3.64-.236-.374A9.797 9.797 0 012.182 12C2.182 6.57 6.57 2.182 12 2.182S21.818 6.57 21.818 12 17.43 21.818 12 21.818z"/></svg>
+        Написать в WhatsApp
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+  <div class="footer-logo gradient-text">Fly Balloons</div>
+  <ul class="footer-links">
+    <li><a href="stoyki.html">Стойки</a></li>
+    <li><a href="molbert.html">Мольберты</a></li>
+    <li><a href="gel.html">Гелиевые</a></li>
+    <li><a href="https://www.instagram.com/flyballoons_astana?igsh=MWNscHQ0MnloODJ1OQ==" target="_blank">Instagram</a></li>
+    <li><a href="https://2gis.kz/astana/geo/70000001081279382" target="_blank">2ГИС</a></li>
+  </ul>
+  <p>📍 г. Астана, ул. Кошкарбаева, 41 &nbsp;|&nbsp; <a href="tel:87066179128">+7 706 617-91-28</a></p>
+  <p style="margin-top:12px;opacity:0.5;">© 2025 Fly Balloons.</p>
+</footer>
+
+<button id="scrollTop" aria-label="Наверх">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 15l-6-6-6 6"/></svg>
+</button>
+
+<script src="script.js"></script>
+<script>
+  // Emoji placeholder in modal
+  document.querySelectorAll('.product-card').forEach(card => {
+    card.addEventListener('click', function() {
+      const placeholder = document.getElementById('modalPlaceholder');
+      const imgEl = document.getElementById('modalImg');
+      const emoji = card.querySelector('.product-card-placeholder');
+      if (emoji && !card.dataset.img) {
+        if (placeholder) { placeholder.textContent = emoji.textContent; placeholder.style.display = 'block'; }
+        if (imgEl) imgEl.style.display = 'none';
+      } else {
+        if (placeholder) placeholder.style.display = 'none';
+        if (imgEl) imgEl.style.display = 'block';
+      }
+    });
+  });
+</script>
+</body>
+</html>

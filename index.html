@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fly Balloons — Воздушные шары Астана</title>
+  <meta name="description" content="Премиальные воздушные шары в Астане. Стойки, фотозоны, гелиевые шары." />
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    /* Parallax hero bg */
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: 
+        radial-gradient(ellipse at 20% 80%, rgba(232,160,176,0.25) 0%, transparent 55%),
+        radial-gradient(ellipse at 80% 20%, rgba(201,168,76,0.15) 0%, transparent 50%),
+        radial-gradient(ellipse at 50% 50%, rgba(253,248,244,1) 0%, rgba(245,230,235,0.8) 100%);
+      z-index: -1;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Background decoration -->
+<div class="bg-decor"></div>
+
+<!-- ===== NAVBAR ===== -->
+<nav>
+  <a href="index.html" class="nav-logo">
+    <img src="logo.jpg" alt="Fly Balloons логотип" />
+    <span class="nav-logo-text gradient-text">Fly Balloons</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="stoyki.html">Стойки</a></li>
+    <li><a href="molbert.html">Мольберты</a></li>
+    <li><a href="gel.html">Гелиевые</a></li>
+  </ul>
+  <button class="burger" id="burger" aria-label="Меню">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- Mobile menu -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="index.html">Главная</a>
+  <a href="stoyki.html">Стойки на шарах</a>
+  <a href="molbert.html">Фотозона на мольберте</a>
+  <a href="gel.html">Гелиевые шары</a>
+  <a href="https://www.instagram.com/flyballoons_astana?igsh=MWNscHQ0MnloODJ1OQ==" target="_blank">Instagram</a>
+</div>
+
+<!-- ===== HERO ===== -->
+<section class="hero">
+
+  <!-- SVG Balloon Cluster -->
+  <div class="balloons-container">
+    <svg class="balloon-svg" viewBox="0 0 320 280" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <!-- Pink balloon gradient -->
+        <radialGradient id="gPink" cx="35%" cy="30%" r="65%">
+          <stop offset="0%" stop-color="#fde8ef"/>
+          <stop offset="50%" stop-color="#f0799a"/>
+          <stop offset="100%" stop-color="#c94d72"/>
+        </radialGradient>
+        <!-- Gold balloon gradient -->
+        <radialGradient id="gGold" cx="35%" cy="30%" r="65%">
+          <stop offset="0%" stop-color="#fff5cc"/>
+          <stop offset="50%" stop-color="#e0b84a"/>
+          <stop offset="100%" stop-color="#b8882a"/>
+        </radialGradient>
+        <!-- Lavender balloon gradient -->
+        <radialGradient id="gLav" cx="35%" cy="30%" r="65%">
+          <stop offset="0%" stop-color="#eedeff"/>
+          <stop offset="50%" stop-color="#b98de0"/>
+          <stop offset="100%" stop-color="#8855bb"/>
+        </radialGradient>
+        <!-- Peach balloon gradient -->
+        <radialGradient id="gPeach" cx="35%" cy="30%" r="65%">
+          <stop offset="0%" stop-color="#ffeedd"/>
+          <stop offset="50%" stop-color="#f0a070"/>
+          <stop offset="100%" stop-color="#c87040"/>
+        </radialGradient>
+        <!-- Rose balloon gradient -->
+        <radialGradient id="gRose" cx="35%" cy="30%" r="65%">
+          <stop offset="0%" stop-color="#ffd6e0"/>
+          <stop offset="50%" stop-color="#e8607a"/>
+          <stop offset="100%" stop-color="#b83050"/>
+        </radialGradient>
+      </defs>
+
+      <!-- === BALLOON 1: Gold — left back === -->
+      <g class="b-anim b-anim-1">
+        <ellipse cx="72" cy="90" rx="34" ry="42" fill="url(#gGold)" opacity="0.92"/>
+        <!-- knot -->
+        <ellipse cx="72" cy="133" rx="4" ry="3" fill="#b8882a"/>
+        <!-- string -->
+        <path d="M72 136 Q68 160 74 185 Q78 200 72 220" stroke="#c9a84c" stroke-width="1.2" fill="none" opacity="0.5"/>
+        <!-- highlight -->
+        <ellipse cx="60" cy="74" rx="9" ry="14" fill="white" opacity="0.22" transform="rotate(-20,60,74)"/>
+      </g>
+
+      <!-- === BALLOON 2: Lavender — right back === -->
+      <g class="b-anim b-anim-2">
+        <ellipse cx="248" cy="80" rx="30" ry="38" fill="url(#gLav)" opacity="0.9"/>
+        <ellipse cx="248" cy="119" rx="3.5" ry="2.5" fill="#8855bb"/>
+        <path d="M248 122 Q252 145 246 168 Q242 185 248 210" stroke="#b98de0" stroke-width="1.2" fill="none" opacity="0.5"/>
+        <ellipse cx="237" cy="66" rx="8" ry="12" fill="white" opacity="0.22" transform="rotate(-15,237,66)"/>
+      </g>
+
+      <!-- === BALLOON 3: Peach — far left === -->
+      <g class="b-anim b-anim-3">
+        <ellipse cx="32" cy="140" rx="26" ry="32" fill="url(#gPeach)" opacity="0.88"/>
+        <ellipse cx="32" cy="173" rx="3" ry="2" fill="#c87040"/>
+        <path d="M32 175 Q29 195 33 215 Q36 228 30 248" stroke="#f0a070" stroke-width="1.1" fill="none" opacity="0.45"/>
+        <ellipse cx="23" cy="128" rx="7" ry="10" fill="white" opacity="0.22" transform="rotate(-18,23,128)"/>
+      </g>
+
+      <!-- === BALLOON 4: Rose — far right === -->
+      <g class="b-anim b-anim-4">
+        <ellipse cx="288" cy="148" rx="24" ry="30" fill="url(#gRose)" opacity="0.88"/>
+        <ellipse cx="288" cy="179" rx="3" ry="2" fill="#b83050"/>
+        <path d="M288 181 Q291 200 287 220 Q284 234 289 254" stroke="#e8607a" stroke-width="1.1" fill="none" opacity="0.45"/>
+        <ellipse cx="279" cy="136" rx="6" ry="10" fill="white" opacity="0.22" transform="rotate(-15,279,136)"/>
+      </g>
+
+      <!-- === BALLOON 5: CENTER Big Pink === -->
+      <g class="b-anim b-anim-5">
+        <ellipse cx="160" cy="100" rx="52" ry="64" fill="url(#gPink)"/>
+        <!-- knot -->
+        <ellipse cx="160" cy="165" rx="6" ry="4.5" fill="#c94d72"/>
+        <!-- string -->
+        <path d="M160 170 Q154 200 162 230 Q167 250 158 272" stroke="#e06080" stroke-width="1.5" fill="none" opacity="0.45"/>
+        <!-- highlight -->
+        <ellipse cx="140" cy="76" rx="14" ry="22" fill="white" opacity="0.2" transform="rotate(-20,140,76)"/>
+        <!-- small shine dot -->
+        <circle cx="133" cy="68" r="4" fill="white" opacity="0.35"/>
+      </g>
+
+    </svg>
+  </div>
+
+  <!-- Brand name with shimmer gradient -->
+  <h1 class="hero-brand gradient-text">Fly Balloons</h1>
+  <p class="hero-tagline">Воздушные шары · Астана · Luxury</p>
+
+  <div class="hero-btns">
+    <a href="stoyki.html" class="btn-primary">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+      Смотреть каталог
+    </a>
+    <a href="https://www.instagram.com/flyballoons_astana?igsh=MWNscHQ0MnloODJ1OQ==" target="_blank" class="btn-insta">
+      <!-- Instagram icon -->
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+        <circle cx="12" cy="12" r="4"/>
+        <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/>
+      </svg>
+      Instagram
+    </a>
+    <a href="https://2gis.kz/astana/geo/70000001081279382" target="_blank" class="btn-2gis">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
+      2ГИС — Найти нас
+    </a>
+  </div>
+</section>
+
+<!-- ===== SERVICES ===== -->
+<section class="services-section">
+  <p class="section-label fade-in">Наш каталог</p>
+  <h2 class="section-title fade-in">Выберите оформление <br>вашего праздника</h2>
+
+  <div class="services-grid">
+    <a href="stoyki.html" class="service-card fade-in">
+      <div class="service-icon">🎈</div>
+      <div class="service-name">Стойки на шарах</div>
+      <div class="service-desc">Яркие стойки из шаров для любого праздника</div>
+      <div class="service-price">от 5 500 тг</div>
+    </a>
+    <a href="molbert.html" class="service-card fade-in">
+      <div class="service-icon">🎨</div>
+      <div class="service-name">Фотозона на мольберте</div>
+      <div class="service-desc">Аренда мольберта с декором для незабываемых фото</div>
+      <div class="service-price">от 10 000 тг</div>
+    </a>
+    <a href="gel.html" class="service-card fade-in">
+      <div class="service-icon">✨</div>
+      <div class="service-name">Гелиевые шары</div>
+      <div class="service-desc">Летящие шары с гелием для создания атмосферы</div>
+      <div class="service-price">по прайсу</div>
+    </a>
+  </div>
+</section>
+
+<!-- ===== ABOUT STRIP ===== -->
+<div class="about-strip fade-in">
+  <h2>«Каждый праздник — особенный»</h2>
+  <p>Мы создаём волшебную атмосферу с помощью воздушных шаров. Доставка и оформление по всей Астане.</p>
+  <a href="https://wa.me/87066179128?text=Здравствуйте%2C%20хочу%20заказать%20шары!" target="_blank" class="btn-whatsapp" style="display:inline-flex;width:auto;padding:14px 36px;">
+    <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.115.554 4.102 1.523 5.827L0 24l6.341-1.498A11.934 11.934 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.809 9.809 0 01-5.001-1.37l-.36-.214-3.733.882.924-3.64-.236-.374A9.797 9.797 0 012.182 12C2.182 6.57 6.57 2.182 12 2.182S21.818 6.57 21.818 12 17.43 21.818 12 21.818z"/></svg>
+    Написать в WhatsApp
+  </a>
+</div>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+  <div class="footer-logo gradient-text">Fly Balloons</div>
+  <ul class="footer-links">
+    <li><a href="stoyki.html">Стойки</a></li>
+    <li><a href="molbert.html">Мольберты</a></li>
+    <li><a href="gel.html">Гелиевые</a></li>
+    <li><a href="https://www.instagram.com/flyballoons_astana?igsh=MWNscHQ0MnloODJ1OQ==" target="_blank">Instagram</a></li>
+    <li><a href="https://2gis.kz/astana/geo/70000001081279382" target="_blank">2ГИС</a></li>
+  </ul>
+  <p>📍 г. Астана, ул. Кошкарбаева, 41 &nbsp;|&nbsp; <a href="tel:87066179128">+7 706 617-91-28</a></p>
+  <p style="margin-top:12px;opacity:0.5;">© 2025 Fly Balloons. Все права защищены.</p>
+</footer>
+
+<!-- Scroll to top -->
+<button id="scrollTop" aria-label="Наверх">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 15l-6-6-6 6"/></svg>
+</button>
+
+<script src="script.js"></script>
+</body>
+</html>

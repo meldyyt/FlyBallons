@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Стойки на шарах — Fly Balloons</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<div class="bg-decor"></div>
+
+<!-- ===== NAVBAR ===== -->
+<nav>
+  <a href="index.html" class="nav-logo">
+    <img src="logo.jpg" alt="Fly Balloons" />
+    <span class="nav-logo-text gradient-text">Fly Balloons</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="stoyki.html" style="color:var(--pink-deep)">Стойки</a></li>
+    <li><a href="molbert.html">Мольберты</a></li>
+    <li><a href="gel.html">Гелиевые</a></li>
+  </ul>
+  <button class="burger" id="burger" aria-label="Меню">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- Mobile menu -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="index.html">Главная</a>
+  <a href="stoyki.html">Стойки на шарах</a>
+  <a href="molbert.html">Фотозона на мольберте</a>
+  <a href="gel.html">Гелиевые шары</a>
+  <a href="https://www.instagram.com/flyballoons_astana?igsh=MWNscHQ0MnloODJ1OQ==" target="_blank">Instagram</a>
+</div>
+
+<!-- ===== PAGE HEADER ===== -->
+<div class="page-header">
+  <div class="page-header-badge fade-in">Каталог</div>
+  <h1 class="gradient-text fade-in">Стойки на шарах</h1>
+  <div class="promo-tag fade-in">🎈 Акция — 5 500 тг</div>
+</div>
+
+<!-- ===== TABS + PRODUCTS ===== -->
+<div class="tabs-container">
+  <div class="tabs-nav">
+    <button class="tab-btn active" data-tab="boy">👦 Для мальчика</button>
+    <button class="tab-btn" data-tab="girl">👧 Для девочки</button>
+  </div>
+
+  <!-- TAB: ДЛЯ МАЛЬЧИКА -->
+  <div class="tab-content active" id="tab-boy">
+    <div class="product-grid">
+
+      <!-- ================================================================
+           📸 ФОТО ДЛЯ КАРТОЧКИ: Стойка «Супергерой»
+           Замените data-img="" на data-img="фото/название-файла.jpg"
+           Пример: data-img="фото/st-boy-1.jpg"
+           ================================================================ -->
+      <div class="product-card fade-in" id="st-boy-1"
+           data-id="st-boy-1"
+           data-name="Стойка «Супергерой»"
+           data-price="5 500 тг"
+           data-img="">  <!-- 👆 СЮДА ВСТАВИТЬ ПУТЬ К ФОТО -->
+        <div class="product-card-placeholder">🦸</div>
+        <div class="card-zoom">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg>
+        </div>
+        <div class="product-card-body">
+          <div class="product-card-name">Стойка «Супергерой»</div>
+          <div class="product-card-price">5 500 тг</div>
+        </div>
+      </div>
+
+      <!-- 📸 ФОТО: Стойка «Динозавры» → data-img="фото/st-boy-2.jpg" -->
+      <div class="product-card fade-in" id="st-boy-2"
+           data-id="st-boy-2"
+           data-name="Стойка «Динозавры»"
+           data-price="5 500 тг"
+           data-img="">  <!-- 👆 СЮДА ВСТАВИТЬ ПУТЬ К ФОТО -->
+        <div class="product-card-placeholder">🦕</div>
+        <div class="card-zoom">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg>
+        </div>
+        <div class="product-card-body">
+          <div class="product-card-name">Стойка «Динозавры»</div>
+          <div class="product-card-price">5 500 тг</div>
+        </div>
+      </div>
+
+      <div class="product-card fade-in" id="st-boy-3"
+           data-id="st-boy-3"
+           data-name="Стойка «Машинки»"
+           data-price="5 500 тг"
+           data-img="">  <!-- 👆 ФОТО: Стойка «Машинки» → data-img="фото/st-boy-3.jpg" -->
+        <div class="product-card-placeholder">🚗</div>
+        <div class="card-zoom">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg>
+        </div>
+        <div class="product-card-body">
+          <div class="product-card-name">Стойка «Машинки»</div>
+          <div class="product-card-price">5 500 тг</div>
+        </div>
+      </div>
+
+      <div class="product-card fade-in" id="st-boy-4"
+           data-id="st-boy-4"
+           data-name="Стойка «Футбол»"
+           data-price="5 500 тг"
+           data-img="">  <!-- 👆 ФОТО: Стойка «Футбол» → data-img="фото/st-boy-4.jpg" -->
+        <div class="product-card-placeholder">⚽</div>
+        <div class="card-zoom">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg>
+        </div>
+        <div class="product-card-body">
+          <div class="product-card-name">Стойка «Футбол»</div>
+          <div class="product-card-price">5 500 тг</div>
+        </div>
+      </div>
+
+      <div class="product-card fade-in" id="st-boy-5"
+           data-id="st-boy-5"
+           data-name="Стойка «Космос»"
+           data-price="5 500 тг"
+           data-img="">  <!-- 👆 ФОТО: Стойка «Космос» → data-img="фото/st-boy-5.jpg" -->
+        <div class="product-card-placeholder">🚀</div>
+        <div class="card-zoom">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg>
+        </div>
+        <div class="product-card-body">
+          <div class="product-card-name">Стойка «Космос»</div>
+          <div class="product-card-price">5 500 тг</div>
+        </div>
+      </div>
+
+      <div class="product-card fade-in" id="st-boy-6"
+           data-id="st-boy-6"
+           data-name="Стойка «Пираты»"
+           data-price="5 500 тг"
+           data-img="">  <!-- 👆 ФОТО: Стойка «Пираты» → data-img="фото/st-boy-6.jpg" -->
+        <div class="product-card-placeholder">🏴‍☠️</div>
+        <div class="card-zoom">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg>
+        </div>
+        <div class="product-card-body">
+          <div class="product-card-name">Стойка «Пираты»</div>
+          <div class="product-card-price">5 500 тг</div>
+        </div>
+      </div>
+
+    </div>
+  </div><!-- /tab-boy -->
+
+  <!-- TAB: ДЛЯ ДЕВОЧКИ -->
+  <div class="tab-content" id="tab-girl">
+    <div class="product-grid">
+
+      <div class="product-card fade-in" id="st-girl-1"
+           data-id="st-girl-1"
+           data-name="Стойка «Принцесса»"
+           data-price="5 500 тг"
+           data-img="">  <!-- 👆 ФОТО: Стойка «Принцесса» → data-img="фото/st-girl-1.jpg" -->
+        <div class="product-card-placeholder">👸</div>
+        <div class="card-zoom">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg>
+        </div>
+        <div class="product-card-body">
+          <div class="product-card-name">Стойка «Принцесса»</div>
+          <div class="product-card-price">5 500 тг</div>
+        </div>
+      </div>
+
+      <div class="product-card fade-in" id="st-girl-2"
+           data-id="st-girl-2"
+           data-name="Стойка «Единорог»"
+           data-price="5 500 тг"
+           data-img="">  <!-- 👆 ФОТО: Стойка «Единорог» → data-img="фото/st-girl-2.jpg" -->
+        <div class="product-card-placeholder">🦄</div>
+        <div class="card-zoom">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg>
+        </div>
+        <div class="product-card-body">
+          <div class="product-card-name">Стойка «Единорог»</div>
+          <div class="product-card-price">5 500 тг</div>
+        </div>
+      </div>
+
+      <div class="product-card fade-in" id="st-girl-3"
+           data-id="st-girl-3"
+           data-name="Стойка «Барби»"
+           data-price="5 500 тг"
+           data-img="">  <!-- 👆 ФОТО: Стойка «Барби» → data-img="фото/st-girl-3.jpg" -->
+        <div class="product-card-placeholder">💖</div>
+        <div class="card-zoom">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg>
+        </div>
+        <div class="product-card-body">
+          <div class="product-card-name">Стойка «Барби»</div>
+          <div class="product-card-price">5 500 тг</div>
+        </div>
+      </div>
+
+      <div class="product-card fade-in" id="st-girl-4"
+           data-id="st-girl-4"
+           data-name="Стойка «Феи»"
+           data-price="5 500 тг"
+           data-img="">  <!-- 👆 ФОТО: Стойка «Феи» → data-img="фото/st-girl-4.jpg" -->
+        <div class="product-card-placeholder">🧚</div>
+        <div class="card-zoom">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg>
+        </div>
+        <div class="product-card-body">
+          <div class="product-card-name">Стойка «Феи»</div>
+          <div class="product-card-price">5 500 тг</div>
+        </div>
+      </div>
+
+      <div class="product-card fade-in" id="st-girl-5"
+           data-id="st-girl-5"
+           data-name="Стойка «Цветочная»"
+           data-price="5 500 тг"
+           data-img="">  <!-- 👆 ФОТО: Стойка «Цветочная» → data-img="фото/st-girl-5.jpg" -->
+        <div class="product-card-placeholder">🌸</div>
+        <div class="card-zoom">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg>
+        </div>
+        <div class="product-card-body">
+          <div class="product-card-name">Стойка «Цветочная»</div>
+          <div class="product-card-price">5 500 тг</div>
+        </div>
+      </div>
+
+      <div class="product-card fade-in" id="st-girl-6"
+           data-id="st-girl-6"
+           data-name="Стойка «Русалка»"
+           data-price="5 500 тг"
+           data-img="">  <!-- 👆 ФОТО: Стойка «Русалка» → data-img="фото/st-girl-6.jpg" -->
+        <div class="product-card-placeholder">🧜</div>
+        <div class="card-zoom">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg>
+        </div>
+        <div class="product-card-body">
+          <div class="product-card-name">Стойка «Русалка»</div>
+          <div class="product-card-price">5 500 тг</div>
+        </div>
+      </div>
+
+    </div>
+  </div><!-- /tab-girl -->
+
+</div><!-- /tabs-container -->
+
+<!-- ===== MODAL ===== -->
+<div class="modal-overlay" id="modal">
+  <div class="modal-box modal-relative">
+    <button class="modal-close" id="modalClose">✕</button>
+    <img class="modal-img" id="modalImg" src="" alt="Товар" />
+    <div id="modalPlaceholder" style="display:none;font-size:4rem;text-align:center;padding:40px;background:linear-gradient(135deg,var(--pink-light),var(--gold-light));"></div>
+    <div class="modal-body">
+      <div class="modal-title" id="modalTitle"></div>
+      <div class="modal-price" id="modalPrice"></div>
+      <a href="#" id="modalWA" target="_blank" class="btn-whatsapp">
+        <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.115.554 4.102 1.523 5.827L0 24l6.341-1.498A11.934 11.934 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.809 9.809 0 01-5.001-1.37l-.36-.214-3.733.882.924-3.64-.236-.374A9.797 9.797 0 012.182 12C2.182 6.57 6.57 2.182 12 2.182S21.818 6.57 21.818 12 17.43 21.818 12 21.818z"/></svg>
+        Написать в WhatsApp
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+  <div class="footer-logo gradient-text">Fly Balloons</div>
+  <ul class="footer-links">
+    <li><a href="stoyki.html">Стойки</a></li>
+    <li><a href="molbert.html">Мольберты</a></li>
+    <li><a href="gel.html">Гелиевые</a></li>
+    <li><a href="https://www.instagram.com/flyballoons_astana?igsh=MWNscHQ0MnloODJ1OQ==" target="_blank">Instagram</a></li>
+    <li><a href="https://2gis.kz/astana/geo/70000001081279382" target="_blank">2ГИС</a></li>
+  </ul>
+  <p>📍 г. Астана, ул. Кошкарбаева, 41 &nbsp;|&nbsp; <a href="tel:87066179128">+7 706 617-91-28</a></p>
+  <p style="margin-top:12px;opacity:0.5;">© 2025 Fly Balloons.</p>
+</footer>
+
+<button id="scrollTop" aria-label="Наверх">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 15l-6-6-6 6"/></svg>
+</button>
+
+<script src="script.js"></script>
+<script>
+  // Handle placeholder emoji in modal
+  const origOpen = window.openModal;
+  document.querySelectorAll('.product-card').forEach(card => {
+    card.addEventListener('click', function() {
+      const placeholder = document.getElementById('modalPlaceholder');
+      const imgEl = document.getElementById('modalImg');
+      const emoji = card.querySelector('.product-card-placeholder');
+      if (emoji && !card.dataset.img) {
+        if (placeholder) { placeholder.textContent = emoji.textContent; placeholder.style.display = 'block'; }
+        if (imgEl) imgEl.style.display = 'none';
+      } else {
+        if (placeholder) placeholder.style.display = 'none';
+        if (imgEl) imgEl.style.display = 'block';
+      }
+    });
+  });
+</script>
+</body>
+</html>
