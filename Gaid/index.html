@@ -217,6 +217,7 @@
       display: grid;
       gap: 18px;
       margin-bottom: 28px;
+      order: 1;
     }
 
     .video-item {
@@ -321,6 +322,7 @@
       flex-direction: column;
       gap: 14px;
       margin-bottom: 24px;
+      order: 3;
     }
 
     .pill-btn {
@@ -371,6 +373,7 @@
     .instructions {
       width: 100%;
       margin-top: 8px;
+      order: 2;
     }
 
     .instructions-title {
@@ -418,6 +421,10 @@
       border-radius: 16px;
       border: 1px solid var(--card-border);
       box-shadow: 0 10px 24px rgba(130, 86, 76, 0.16);
+    }
+
+    .instruction-images img[hidden] {
+      display: none;
     }
 
     /* FOOTER */
@@ -582,14 +589,14 @@
       <div class="video-gallery">
         <div class="video-item">
           <video controls playsinline preload="metadata">
-            <source src="instruction-video-1.MOV" type="video/quicktime">
+            <source src="instruction-video-1.mp4" type="video/mp4">
             Ваш браузер не поддерживает воспроизведение видео.
           </video>
           <span class="video-item-title">Инструкция — видео 1</span>
         </div>
         <div class="video-item">
           <video controls playsinline preload="metadata">
-            <source src="instruction-video-2.MOV" type="video/quicktime">
+            <source src="instruction-video-2.mp4" type="video/mp4">
             Ваш браузер не поддерживает воспроизведение видео.
           </video>
           <span class="video-item-title">Инструкция — видео 2</span>
