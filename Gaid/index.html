@@ -212,6 +212,38 @@
       justify-content: center;
     }
 
+    .video-gallery {
+      width: 100%;
+      display: grid;
+      gap: 18px;
+      margin-bottom: 28px;
+    }
+
+    .video-item {
+      display: grid;
+      gap: 8px;
+    }
+
+    .video-item video {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      display: block;
+      object-fit: cover;
+      background: #2f2523;
+      border: 1px solid var(--card-border);
+      border-radius: 20px;
+      box-shadow: 0 16px 35px rgba(206, 142, 138, 0.22);
+    }
+
+    .video-item-title {
+      font-size: 0.78rem;
+      font-weight: 600;
+      color: #6d514c;
+      text-align: center;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+
     .video-poster {
       position: absolute;
       inset: 0;
@@ -334,6 +366,58 @@
       width: 17px;
       height: 17px;
       fill: currentColor;
+    }
+
+    .instructions {
+      width: 100%;
+      margin-top: 8px;
+    }
+
+    .instructions-title {
+      margin-bottom: 12px;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.55rem;
+      font-weight: 600;
+      color: #6f4c47;
+      text-align: center;
+    }
+
+    .language-switcher {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 14px;
+    }
+
+    .language-btn {
+      flex: 1;
+      padding: 11px 8px;
+      border: 1px solid rgba(201, 111, 117, 0.35);
+      border-radius: 9999px;
+      background: rgba(255, 255, 255, 0.55);
+      color: #805c56;
+      font: inherit;
+      font-size: 0.75rem;
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    .language-btn.active {
+      background: var(--btn-primary);
+      border-color: transparent;
+      color: #fff;
+    }
+
+    .instruction-images {
+      display: grid;
+      gap: 14px;
+    }
+
+    .instruction-images img {
+      width: 100%;
+      display: block;
+      border-radius: 16px;
+      border: 1px solid var(--card-border);
+      box-shadow: 0 10px 24px rgba(130, 86, 76, 0.16);
     }
 
     /* FOOTER */
@@ -494,17 +578,21 @@
       <p class="hero-subtitle">ВОЗДУШНЫЕ ШАРЫ · АСТАНА</p>
       <p class="hero-desc">Пошаговое видеоруководство: как легко и быстро собрать мольберт для вашей фотозоны</p>
 
-      <!-- Video Mockup / Central Player -->
-      <div class="video-card" id="openVideo">
-        <div class="video-poster">
-          <!-- Easel Illustration Outline -->
-          <svg class="easel-graphic" viewBox="0 0 24 24">
-            <path d="M12 3L5 21M12 3L19 21M12 3V21M3 15H21" stroke-width="1.6" stroke-linecap="round"/>
-          </svg>
-          <div class="play-btn-pulse">
-            <div class="play-icon"></div>
-          </div>
-          <span class="video-tag">▶ ИНСТРУКЦИЯ</span>
+      <!-- Local instruction videos -->
+      <div class="video-gallery">
+        <div class="video-item">
+          <video controls playsinline preload="metadata">
+            <source src="instruction-video-1.MOV" type="video/quicktime">
+            Ваш браузер не поддерживает воспроизведение видео.
+          </video>
+          <span class="video-item-title">Инструкция — видео 1</span>
+        </div>
+        <div class="video-item">
+          <video controls playsinline preload="metadata">
+            <source src="instruction-video-2.MOV" type="video/quicktime">
+            Ваш браузер не поддерживает воспроизведение видео.
+          </video>
+          <span class="video-item-title">Инструкция — видео 2</span>
         </div>
       </div>
 
@@ -528,6 +616,21 @@
         </a>
       </div>
 
+      <!-- Instructions by language -->
+      <section class="instructions" aria-labelledby="instructionsTitle">
+        <h2 class="instructions-title" id="instructionsTitle">Инструкция по фото</h2>
+        <div class="language-switcher" role="group" aria-label="Выбор языка инструкции">
+          <button class="language-btn active" type="button" data-language="ru" aria-pressed="true">Русский</button>
+          <button class="language-btn" type="button" data-language="kk" aria-pressed="false">Қазақша</button>
+        </div>
+        <div class="instruction-images" id="instructionImages">
+          <img src="instruction-ru-1.jpeg" alt="Русская инструкция, шаги 1–4" data-language-image="ru">
+          <img src="instruction-ru-2.jpeg" alt="Русская инструкция, шаги 1–3" data-language-image="ru">
+          <img src="instruction-kk-1.jpeg" alt="Қазақша нұсқаулық, 1–3 қадам" data-language-image="kk" hidden>
+          <img src="instruction-kk-2.jpeg" alt="Қазақша нұсқаулық, 1–4 қадам" data-language-image="kk" hidden>
+        </div>
+      </section>
+
     </main>
 
     <!-- FOOTER -->
@@ -536,48 +639,23 @@
     </footer>
   </div>
 
-  <!-- VIDEO MODAL POPUP -->
-  <div class="modal-overlay" id="videoModal">
-    <div class="modal-content">
-      <button class="modal-close" id="closeModal">✕</button>
-      <div class="video-wrapper">
-        <iframe
-          id="ytPlayer"
-          src="https://www.youtube.com/embed/GowfvVJpps4?enablejsapi=1"
-          title="Инструкция по сборке мольберта"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen>
-        </iframe>
-      </div>
-    </div>
-  </div>
-
   <script>
-    // Modal Open & Close logic
-    const modal = document.getElementById('videoModal');
-    const openBtn = document.getElementById('openVideo');
-    const closeBtn = document.getElementById('closeModal');
-    const iframe = document.getElementById('ytPlayer');
+    const languageButtons = document.querySelectorAll('.language-btn');
+    const instructionImages = document.querySelectorAll('[data-language-image]');
 
-    function openModal() {
-      modal.classList.add('active');
-    }
-
-    function closeModalFunc() {
-      modal.classList.remove('active');
-      // Stop playback by clearing src temporarily
-      const src = iframe.src;
-      iframe.src = '';
-      iframe.src = src;
-    }
-
-    openBtn.addEventListener('click', openModal);
-    closeBtn.addEventListener('click', closeModalFunc);
-    modal.addEventListener('click', (e) => {
-      if (e.target === modal) closeModalFunc();
+    languageButtons.forEach((button) => {
+      button.addEventListener('click', () => {
+        const language = button.dataset.language;
+        languageButtons.forEach((item) => {
+          const isActive = item === button;
+          item.classList.toggle('active', isActive);
+          item.setAttribute('aria-pressed', String(isActive));
+        });
+        instructionImages.forEach((image) => {
+          image.hidden = image.dataset.languageImage !== language;
+        });
+      });
     });
-
   </script>
 </body>
 </html>
