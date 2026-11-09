@@ -227,14 +227,35 @@
 
     .video-item video {
       width: 100%;
-      aspect-ratio: 16 / 9;
+      height: auto;
+      max-height: 78vh;
       display: block;
-      object-fit: cover;
+      object-fit: contain;
       filter: none;
       background: #2f2523;
       border: 1px solid var(--card-border);
       border-radius: 20px;
       box-shadow: 0 16px 35px rgba(206, 142, 138, 0.22);
+    }
+
+    .video-item video:fullscreen {
+      width: 100vw;
+      height: 100vh;
+      max-height: none;
+      object-fit: contain;
+      border: none;
+      border-radius: 0;
+      background: #000;
+    }
+
+    .video-item video:-webkit-full-screen {
+      width: 100vw;
+      height: 100vh;
+      max-height: none;
+      object-fit: contain;
+      border: none;
+      border-radius: 0;
+      background: #000;
     }
 
     .video-item-title {
