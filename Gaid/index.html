@@ -421,10 +421,49 @@
       border-radius: 16px;
       border: 1px solid var(--card-border);
       box-shadow: 0 10px 24px rgba(130, 86, 76, 0.16);
+      cursor: zoom-in;
     }
 
     .instruction-images img[hidden] {
       display: none;
+    }
+
+    .image-modal {
+      position: fixed;
+      inset: 0;
+      z-index: 120;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 18px;
+      background: rgba(43, 30, 28, 0.88);
+    }
+
+    .image-modal.active {
+      display: flex;
+    }
+
+    .image-modal img {
+      max-width: 100%;
+      max-height: 92vh;
+      object-fit: contain;
+      border-radius: 10px;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+      cursor: zoom-out;
+    }
+
+    .image-modal-close {
+      position: absolute;
+      top: 14px;
+      right: 14px;
+      width: 38px;
+      height: 38px;
+      border: none;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.25);
+      color: #fff;
+      font-size: 1.4rem;
+      cursor: pointer;
     }
 
     /* FOOTER */
@@ -646,9 +685,17 @@
     </footer>
   </div>
 
-  <script>
-    const languageButtons = document.querySelectorAll('.language-btn');
-    const instructionImages = document.querySelectorAll('[data-language-image]');
+    <div class="image-modal" id="imageModal" role="dialog" aria-modal="true" aria-label="Увеличенная инструкция">
+      <button class="image-modal-close" id="closeImageModal" type="button" aria-label="Закрыть">✕</button>
+      <img id="expandedInstruction" alt="">
+    </div>
+
+    <script>
+      const languageButtons = document.querySelectorAll('.language-btn');
+      const instructionImages = document.querySelectorAll('[data-language-image]');
+      const imageModal = document.getElementById('imageModal');
+      const expandedInstruction = document.getElementById('expandedInstruction');
+      const closeImageModal = document.getElementById('closeImageModal');
 
     languageButtons.forEach((button) => {
       button.addEventListener('click', () => {
@@ -662,6 +709,30 @@
           image.hidden = image.dataset.languageImage !== language;
         });
       });
+    });
+
+    function closeExpandedInstruction() {
+      imageModal.classList.remove('active');
+      expandedInstruction.removeAttribute('src');
+    }
+
+    instructionImages.forEach((image) => {
+      image.addEventListener('click', () => {
+        expandedInstruction.src = image.src;
+        expandedInstruction.alt = image.alt;
+        imageModal.classList.add('active');
+      });
+    });
+
+    closeImageModal.addEventListener('click', closeExpandedInstruction);
+    imageModal.addEventListener('click', (event) => {
+      if (event.target === imageModal || event.target === expandedInstruction) {
+        closeExpandedInstruction();
+      }
+    });
+
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape') closeExpandedInstruction();
     });
   </script>
 </body>
